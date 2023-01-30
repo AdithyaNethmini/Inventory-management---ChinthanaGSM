@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Manager - Return Stocks</title>
+
+    <!-- Custom fonts-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles-->
+    <link href="css/custom-bootstrap.css" rel="stylesheet">
+</head>
+
+<body id="page-top">
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <div class="sidebar-brand-icon">
+                    <img class="img-fluid mt-3" src="./img/logo.png" alt="Chinthana GSM">
+                </div>
+            </a>
+            <!-- Divider -->
+            <hr class="sidebar-divider mt-4 mb-0">
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item active">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-fw fa-cube"></i>
+                    <span>Return Stocks</span></a>
+            </li>
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Functions
+            </div>
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
+                    aria-expanded="true" aria-controls="collapsePages">
+                    <i class="fas fa-fw fa-truck"></i>
+                    <span>Suppliers</span>
+                </a>
+                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Supplier Functions:</h6>
+                        <a class="collapse-item" href="./mngr_suppliers.html">View Suppliers</a>
+                        <div class="collapse-divider"></div>
+                    </div>
+                </div>
+            </li>
+            <!-- Nav Item - Utilities Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
+                    aria-expanded="true" aria-controls="collapseUtilities">
+                    <i class="fas fa-fw fa-cube"></i>
+                    <span>Stock</span>
+                </a>
+                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Stock Functions:</h6>
+                        <a class="collapse-item" href="./mngr_add_stock.html">Add Stocks</a>
+                        <a class="collapse-item" href="./mngr_stocks.html">View/Update Stocks</a>
+                        <a class="collapse-item" href="./mngr_sell_stock.html">Sell Stocks</a>
+                        <a class="collapse-item active" href="#">Return Stocks</a>
+                        <a class="collapse-item" href="./mngr_sold_stocks.html">Sold Stocks</a>
+                        <a class="collapse-item" href="./mngr_returned_stocks.html">Returned Stocks</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="./mngr_dash.html"
+                    aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+            <!-- Sidebar Message -->
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+            <!-- Main Content -->
+            <div id="content">
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Stock Manager</span>
+                                <img class="img-profile rounded-circle"
+                                    src="./img/user.svg">
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Logout
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800">Return Stocks</h1>
+                    </div>
+
+                        
+                    <div class="row">
+
+                        <!-- Area Chart -->
+                        <div class="col-xl-12 col-lg-12">
+                            <div class="container">
+                                <div class="card o-hidden border-0 shadow-lg my-5">
+                                    <div class="card-body p-0">
+                                        <!-- Nested Row within Card Body -->
+                                        <div class="row">
+                                            <div class="col-lg-5 d-none d-lg-block bg-return-stock-image"></div>
+                                            <div class="col-lg-7">
+                                                <div class="p-5">
+                                                    <div class="text-center">
+                                                        <h1 class="h4 text-gray-900 mb-4">Enter Returning Stock Details</h1>
+                                                    </div>
+                                                    <form class="user">
+                                                        <div class="form-group">
+                                                            <div class="col-sm-6 mb-3 mb-sm-0">
+                                                                <div id="pageSpinner" class="d-none">Loading...</div>
+                                                            </div>
+                                                            <div id="listItem"></div>
+                                                            
+                                                            <span class="small">* Other info fields will complete automatically.</span>
+                                                        </div>
+                                                        <input disabled type="text" class="d-none" id="stockName" name="stockName">
+                                                        <div class="form-group">
+                                                            <input disabled type="text" class="form-control form-control-user" id="brandName" placeholder="Brand Name" name="brandName">
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <div class="col-sm-6 mb-3 mb-sm-0">
+                                                                <input disabled type="text" class="form-control form-control-user" id="supName" placeholder="Supplier" name="supName">
+                                                            </div>
+                                                            <div class="col-sm-6 mb-3 mb-sm-0">
+                                                                <input disabled type="text" class="form-control form-control-user" id="manYear" placeholder="Man. Year" name="manYear">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <div class="col-sm-6 mb-3 mb-sm-0">
+                                                                <input disabled type="text" class="form-control form-control-user" id="wholeSalePrice" placeholder="Whole Sale Price" name="wholeSalePrice">  
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <input type="text" class="form-control form-control-user" id="quantity" placeholder="Quantity" name="quantity">
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <textarea class="form-control" id="return_note" name="return_note" rows="4" cols="50">Return Notice</textarea>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                            <div class="col-sm-6 mb-3 mb-sm-0">
+                                                                <button type="button" class="btn btn-primary btn-user btn-block mb-3" onclick="returnStockCall()">
+                                                                    <i class="fas fa-file-import fa-fw"></i> Return Stock<span id="save-btn-spinner" class="spinner-border-sm"></span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <button type="reset" class="btn btn-secondary btn-user btn-block mb-3">
+                                                                    <i class="fas fa-backspace fa-fw"></i> Clear
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                        <div id="demo"></div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="index.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="./vendor/jquery/jquery.min.js"></script>
+    <script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="./vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="./js/custom-js.js"></script>
+
+    <div id="scriptResponse">
+
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $("#pageSpinner").removeClass("d-none");
+            $.ajax({
+                type: 'POST',
+                url: 'https://se-project-chinthanagsm.herokuapp.com/mngr_retrn_stock_load.php',
+                success: function(response) {
+                    $('#listItem').html(response);
+                    $("#pageSpinner").addClass("d-none");
+                }
+            });
+        });
+
+
+        function dropdownChange () {
+            var val1 = document.getElementById('stockId').value;
+            $.ajax({
+                type: 'POST',
+                url: 'https://se-project-chinthanagsm.herokuapp.com/mngr_retrn_stock_load_form.php',
+                data: { stockId: val1 },
+                success: function(response) {
+                    $('#scriptResponse').html(response);
+                }
+            });
+        }
+
+        //Validation scripts
+        function returnStockCall () {
+            var val1 = document.getElementById('stockId').value;
+            var val7 = document.getElementById('quantity').value;
+
+            if (val1 == "") {
+                $('#demo').html("<div class='alert alert-danger alert-dismissible fade show'><button type='button' class='close' data-dismiss='alert'>&times;</button><strong id='demo'>Error!</strong> You have to select a stock to return!</div>");
+            }
+            else {
+                if (val7 == "") {
+                    $('#demo').html("<div class='alert alert-danger alert-dismissible fade show'><button type='button' class='close' data-dismiss='alert'>&times;</button><strong id='demo'>Error!</strong> Quantity cannot be empty!</div>");
+                }
+                else {
+                    returnStockCallInsert();
+                }
+            }
+        }
+
+        function returnStockCallInsert () {
+            $("#save-btn-spinner").addClass("spinner-border");
+            var val1 = document.getElementById('stockId').value;
+            var val2 = document.getElementById('stockName').value;
+            var val3 = document.getElementById('brandName').value;
+            var val4 = document.getElementById('supName').value;
+            var val5 = document.getElementById('manYear').value;
+            var val6 = document.getElementById('wholeSalePrice').value;
+            var val7 = document.getElementById('quantity').value;
+            var val8 = document.getElementById('return_note').value;
+            
+            $.ajax({
+                type: 'POST',
+                url: 'https://se-project-chinthanagsm.herokuapp.com/mngr_retrn_stock_updatedb.php',
+                data: { stockId: val1, stockName: val2, brandName: val3, supName: val4, manYear: val5, wholeSalePrice: val6, quantity: val7, return_note: val8 },
+                success: function(response) {
+                    $("#save-btn-spinner").removeClass("spinner-border");
+                    $('#demo').html(response);
+                }
+            });
+        }
+        
+        
+    </script>
+</body>
+
+</html>
